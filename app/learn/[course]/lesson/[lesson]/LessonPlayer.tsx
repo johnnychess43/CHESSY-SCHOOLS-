@@ -59,6 +59,7 @@ export default function LessonPlayer({ courseSlug, courseTitle, lesson, lessonNu
     <div className="lesson-progress-track"><span style={{width:(lessonNumber / lessonCount * 100) + "%"}}/></div>
     <div className="lesson-layout"><article className="lesson-material">
       <div className="material-intro"><div className="material-icon"><BookOpen size={21}/></div><div><span className="eyebrow">TODAY'S LEARNING GOAL</span><p>{lesson.objective}</p></div></div>
+      <div className="theory-heading"><span className="theory-heading-icon"><BookOpen size={17}/></span><div><span className="eyebrow">STEP 1 · STUDY</span><h2>Lesson theory</h2><p>Read the notes and examples below before you answer the questions.</p></div></div>
       {lesson.sections.map((section,index)=><section className="material-section" key={section.heading}><h2><span>{index+1}</span>{section.heading}</h2><p>{section.body}</p>{section.example&&<div className="lesson-example">{section.example}</div>}</section>)}
       <div className="reflection-check"><span className="eyebrow">PAUSE AND THINK</span><h2>{lesson.reflectionQuestion}</h2><p>Try explaining it in your own words before moving to the quiz. This practice is for learning and is not graded.</p><textarea value={reflection} onChange={(event) => setReflection(event.target.value)} rows={3} placeholder="Write what you understood in your own words…" /></div>
       <div className="knowledge-check"><div className="quiz-label"><Sparkles size={15}/> QUICK CHECK · EARN XP</div><h2>{lesson.question}</h2>
