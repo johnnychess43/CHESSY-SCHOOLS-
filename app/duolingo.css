@@ -79,3 +79,26 @@
   .learning-shell .lesson-start { width: 100%; }
   .learning-shell .path-badge { margin-top: 12px; }
 }
+
+/* Clear theory-first lesson layout */
+.theory-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 18px 0 8px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid #e7edf1;
+}
+.theory-heading-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  color: #429b08;
+  background: #e8f8dc;
+}
+.theory-heading .eyebrow { color: #429b08; font-weight: 900; letter-spacing: .08em; }
+.theory-heading h2 { margin: 3px 0 5px; color: #263238; font-size: 1.45rem; }
+.theory-heading p { margin: 0 0 10px; color: #657680; line-height: 1.6; }
