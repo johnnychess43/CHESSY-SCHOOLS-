@@ -46,7 +46,21 @@ export default function AccountPage() {
         : await supabase.auth.signInWithPassword({email:email.trim(), password});
       if (result.error) throw result.error;
       if (mode === "signup" && !result.data.session) setMessage("Account created. Check your email for the confirmation link, then sign in.");
-      else { setUser(result.data.user); setMessage(mode === "signup" ? "Welcome! Your student account is ready." : "You're signed in."); }
+      else {
+        const signedInUser = result.data.user;
+        if (signedInUser) {
+          try {
+            const localIds = JSON.parse(localStorage.getItem("chessy-learning-progress") || "[]") as string[];
+            const legacyRows = courses.flatMap(course => course.lessons.filter(lesson => localIds.includes(course.slug + "/" + lesson.slug)).map(lesson => ({user_id:signedInUser.id,course_slug:course.slug,lesson_slug:lesson.slug,xp:10})));
+            if (legacyRows.length) {
+              const {error:syncError} = await supabase.from("learning_progress").upsert(legacyRows,{onConflict:"user_id,course_slug,lesson_slug"});
+              if (syncError) setMessage("You're signed in. Some earlier local progress could not sync yet.");
+              else setMessage("You're signed in. Your earlier completed lessons were synced.");
+            } else setMessage(mode === "signup" ? "Welcome! Your student account is ready." : "You're signed in.");
+          } catch { setMessage("You're signed in. Your earlier local progress remains on this device."); }
+          setUser(signedInUser);
+        }
+      }
     } catch (error) { setMessage(error instanceof Error ? error.message : "Could not complete sign-in."); }
     finally { setBusy(false); }
   }
