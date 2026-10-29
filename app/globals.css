@@ -124,3 +124,7 @@
 .progress-save-message{margin:12px 0 0}
 @media(max-width:760px){.dashboard-courses{grid-template-columns:repeat(2,minmax(0,1fr))}.student-welcome{align-items:flex-start;flex-direction:column}.student-stats>div{padding:14px}}
 @media(max-width:520px){.dashboard-courses{grid-template-columns:1fr}.student-stats{gap:8px}.student-stats>div{padding:12px}.student-stats strong{font-size:22px}.student-stats span{font-size:9px}.nav nav{gap:10px}.nav nav a{font-size:10px}}
+
+
+/* Beginner-first reflection before knowledge checks */
+.reflection-check{margin-top:24px;padding:20px;border:1px solid #373448;border-radius:14px;background:#15151f}.reflection-check h2{font:700 16px/1.5 Manrope;margin:10px 0}.reflection-check p{font-size:11px;line-height:1.7;color:#aaaaba;margin:0 0 13px}.reflection-check textarea{display:block;width:100%;resize:vertical;min-height:82px;padding:12px;border:1px solid #393747;border-radius:9px;background:#0e0f16;color:#f5f4f0;font:12px/1.7 'DM Sans',sans-serif;outline:none}.reflection-check textarea:focus{border-color:#a79aff;box-shadow:0 0 0 3px #a79aff20}
