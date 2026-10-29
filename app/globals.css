@@ -87,3 +87,40 @@
 .lesson-complete .button-primary{white-space:nowrap}
 @media(max-width:760px){.lesson-layout{grid-template-columns:1fr}.lesson-sidebar{grid-template-columns:1fr 1fr}.learning-path-heading{align-items:start;flex-direction:column}.path-badge{white-space:normal}.learning-hero{padding-top:42px}}
 @media(max-width:520px){.learning-nav{height:74px}.learning-nav .brand{font-size:12px}.learning-back{font-size:10px}.lesson-node{align-items:flex-start;flex-wrap:wrap;gap:12px}.lesson-number{flex-basis:38px;height:38px}.lesson-node-copy{min-width:calc(100% - 55px)}.lesson-start{margin-left:50px}.learning-stats{gap:12px}.lesson-sidebar{grid-template-columns:1fr}.lesson-complete{align-items:flex-start;flex-direction:column}.lesson-complete .button-primary{width:100%}.lesson-topline{flex-wrap:wrap}}
+
+/* Student account and persistent progress */
+.auth-card{width:min(100%,470px);margin:45px auto 0;padding:clamp(24px,5vw,42px);border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#171722,#101119);box-shadow:0 25px 80px #0003}
+.auth-symbol{width:50px;height:50px;display:grid;place-items:center;border-radius:15px;background:#29243e;color:#c3b7ff;margin-bottom:24px}
+.auth-card h1,.student-welcome h1{font:800 clamp(28px,4vw,38px)/1.2 Manrope;letter-spacing:-.045em;margin:10px 0}
+.auth-card>p,.student-welcome p{color:#a5a5b5;font-size:12px;line-height:1.8}
+.auth-notice{margin:18px 0;padding:12px;border:1px solid #6a5940;background:#2a2118;color:#f0d6ad;border-radius:9px;font-size:11px;line-height:1.7}
+.auth-form{display:grid;gap:16px;margin-top:24px}
+.auth-form label{display:grid;gap:8px;color:#d6d3e3;font-size:11px;font-weight:600}
+.auth-form input{width:100%;min-height:44px;border:1px solid #393747;border-radius:9px;background:#0e0f16;color:#f5f4f0;padding:0 13px;font:13px 'DM Sans',sans-serif;outline:none}
+.auth-form input:focus{border-color:#a79aff;box-shadow:0 0 0 3px #a79aff20}
+.auth-form .button-primary{display:flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;margin-top:4px}
+.auth-form .button-primary:disabled{opacity:.5;cursor:not-allowed}
+.auth-switch{margin-top:22px;text-align:center;font-size:11px!important}
+.auth-switch button{border:0;background:none;color:#c3b7ff;font:700 11px 'DM Sans',sans-serif;cursor:pointer}
+.auth-message,.progress-save-message{color:#b9f0d1;font-size:11px;line-height:1.7}
+.account-content{padding-bottom:40px}
+.student-dashboard{padding-top:48px}
+.student-welcome{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:28px}
+.student-welcome p{margin:0}
+.signout-button{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:9px;background:#171722;color:#dedbec;padding:11px 14px;font:600 11px 'DM Sans',sans-serif;cursor:pointer}
+.student-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.student-stats>div{display:grid;gap:9px;padding:19px;border:1px solid var(--line);border-radius:14px;background:#14141e}
+.student-stats svg{color:#b7aaff}
+.student-stats strong{font:800 28px Manrope}
+.student-stats span{font-size:10px;color:#a6a5b5}
+.dashboard-section-heading{margin:34px 0 17px}
+.dashboard-section-heading h2{font:800 24px Manrope;letter-spacing:-.035em;margin:7px 0}
+.dashboard-courses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.dashboard-course{display:flex;flex-direction:column;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:14px;background:#14141e}
+.dashboard-course h3{font:700 15px/1.5 Manrope;margin:10px 0}
+.dashboard-course>p{font-size:11px;color:#a5a5b5;margin:0 0 10px}
+.dashboard-course .sidebar-progress{width:100%;margin:0 0 17px}
+.dashboard-course .lesson-start{margin-top:auto}
+.progress-save-message{margin:12px 0 0}
+@media(max-width:760px){.dashboard-courses{grid-template-columns:repeat(2,minmax(0,1fr))}.student-welcome{align-items:flex-start;flex-direction:column}.student-stats>div{padding:14px}}
+@media(max-width:520px){.dashboard-courses{grid-template-columns:1fr}.student-stats{gap:8px}.student-stats>div{padding:12px}.student-stats strong{font-size:22px}.student-stats span{font-size:9px}.nav nav{gap:10px}.nav nav a{font-size:10px}}
