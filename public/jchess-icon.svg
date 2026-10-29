@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<defs><linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00e5ff"/><stop offset=".32" stop-color="#7c3aed"/><stop offset=".65" stop-color="#ff3cac"/><stop offset="1" stop-color="#ffb703"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff176"/><stop offset=".5" stop-color="#ffb703"/><stop offset="1" stop-color="#ff6d00"/></linearGradient></defs>
+<circle cx="64" cy="64" r="59" fill="#080b1b" stroke="url(#ring)" stroke-width="5"/>
+<path d="M31 86 Q64 66 97 86 L87 96 Q64 83 41 96Z" fill="#fff" stroke="#00d9ff" stroke-width="2"/>
+<path d="M64 24 L72 32 L69 43 L80 54 L74 61 L54 61 L48 54 L59 43 L56 32Z" fill="url(#gold)" stroke="#fff0a6" stroke-width="1.5"/>
+<path d="M53 61 L75 61 L78 72 L70 80 L70 86 L58 86 L58 80 L50 72Z" fill="#111a42" stroke="url(#ring)" stroke-width="2"/>
+<text x="64" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" letter-spacing="-1" fill="#fff">J<tspan fill="#00d9ff">C</tspan><tspan fill="#b86bff">H</tspan><tspan fill="#23e6a8">E</tspan><tspan fill="#00d9ff">SS</tspan></text>
+</svg>
