@@ -5,12 +5,13 @@ export type Lesson = {
 };
 export type Course = { slug: string; title: string; category: string; description: string; level: string; lessons: Lesson[] };
 
-const lesson = (slug: string, title: string, objective: string, heading1: string, body1: string, heading2: string, body2: string, question: string, options: string[], answer: number, explanation: string, example?: string, extraHeading?: string, extraBody?: string, extraExample?: string): Lesson => ({
+const lesson = (slug: string, title: string, objective: string, heading1: string, body1: string, heading2: string, body2: string, question: string, options: string[], answer: number, explanation: string, example?: string, extraHeading?: string, extraBody?: string, extraExample?: string, fourthHeading?: string, fourthBody?: string, fourthExample?: string): Lesson => ({
   slug, title, minutes: 10, objective,
   sections: [
     { heading: heading1, body: body1, ...(example ? { example } : {}) },
     { heading: heading2, body: body2 },
-    ...(extraHeading && extraBody ? [{ heading: extraHeading, body: extraBody, ...(extraExample ? { example: extraExample } : {}) }] : [])
+    ...(extraHeading && extraBody ? [{ heading: extraHeading, body: extraBody, ...(extraExample ? { example: extraExample } : {}) }] : []),
+    ...(fourthHeading && fourthBody ? [{ heading: fourthHeading, body: fourthBody, ...(fourthExample ? { example: fourthExample } : {}) }] : [])
   ],
   reflectionQuestion: `In your own words, explain one thing you learned about ${title.toLowerCase()}.`,
   question, options, answer, explanation
