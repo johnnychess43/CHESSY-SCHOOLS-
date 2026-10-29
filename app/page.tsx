@@ -17,8 +17,8 @@ export default function Home() {
     <div className="announcement"><Sparkles size={14}/> Your next skill starts here <span>Explore learning paths <ArrowRight size={13}/></span></div>
     <header className="nav wrap">
       <a className="brand" href="#"><img className="brand-logo" src="/jchess-icon.svg" alt="" aria-hidden="true"/><span>CHESSY<span className="brand-muted"> SCHOOLS</span><small>LEARN WITHOUT LIMITS</small></span></a>
-      <nav><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#scholarships">Scholarships</a></nav>
-      <a className="nav-cta" href="#courses">Start learning <ArrowRight size={15}/></a>
+      <nav><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#scholarships">Scholarships</a><a href="/account">Student account</a></nav>
+      <a className="nav-cta" href="/account">Student login <ArrowRight size={15}/></a>
     </header>
 
     <section className="hero wrap">
