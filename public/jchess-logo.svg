@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+<title id="title">JCHESS</title><desc id="desc">Colorful JCHESS education and technology emblem</desc>
+<defs><linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00e5ff"/><stop offset=".25" stop-color="#2563eb"/><stop offset=".5" stop-color="#c026d3"/><stop offset=".75" stop-color="#ffb703"/><stop offset="1" stop-color="#00e5a8"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff176"/><stop offset=".55" stop-color="#ffb703"/><stop offset="1" stop-color="#ff6d00"/></linearGradient></defs>
+<circle cx="300" cy="300" r="278" fill="#080b1b" stroke="url(#ring)" stroke-width="14"/>
+<g fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M106 180h82v58h-82z M96 244h102" stroke="#c026d3"/><path d="M415 164h62m-31-31v62" stroke="#00d9ff"/><path d="M91 324l26-27 20 12 35-44" stroke="#00e5a8"/><path d="M428 302h59v45h-59z" stroke="#a78bfa"/></g>
+<path d="M120 402 Q300 325 480 402 L430 450 Q300 405 170 450Z" fill="#fff" stroke="#00d9ff" stroke-width="8"/><path d="M130 437 Q300 377 470 437 L438 463 Q300 425 162 463Z" fill="url(#gold)"/>
+<path d="M260 135 L300 95 L340 135 L327 168 L360 206 L344 231 L256 231 L240 206 L273 168Z" fill="url(#gold)" stroke="#fff0a6" stroke-width="6"/><path d="M259 232h82l12 35-28 29v48h-50v-48l-28-29z" fill="#121936" stroke="url(#ring)" stroke-width="8"/>
+<text x="300" y="535" text-anchor="middle" font-family="Arial,sans-serif" font-size="104" font-weight="900" letter-spacing="-5" fill="#ffb703">J<tspan fill="#00d9ff">C</tspan><tspan fill="#c084fc">H</tspan><tspan fill="#23e6a8">E</tspan><tspan fill="#00aaff">SS</tspan></text>
+</svg>
