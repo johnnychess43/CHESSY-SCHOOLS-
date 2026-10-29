@@ -1,12 +1,12 @@
 import { ArrowRight, BookOpen, BrainCircuit, BriefcaseBusiness, ChartNoAxesCombined, Code2, GraduationCap, MessageCircle, ShieldCheck, Sparkles, WalletCards } from "lucide-react";
 
 const courses = [
-  { icon: Code2, category: "TECHNOLOGY", title: "Software & Web Development", desc: "Programming foundations, HTML, CSS, JavaScript, APIs and software engineering.", tags: ["Beginner friendly", "Projects"] },
-  { icon: BrainCircuit, category: "AI & DATA", title: "AI, Machine Learning & Data Science", desc: "Explore Python, statistics, data analysis, machine learning and responsible AI.", tags: ["Practical labs", "Data skills"] },
-  { icon: ShieldCheck, category: "CYBERSECURITY", title: "Cybersecurity & Ethical Hacking", desc: "Learn defensive security, networking, secure systems and legal lab-based testing.", tags: ["Defensive first", "Safe labs"] },
-  { icon: ChartNoAxesCombined, category: "FINANCE", title: "Financial Literacy & Forex", desc: "Budgeting, saving, accounting basics, markets, risk and trading fundamentals.", tags: ["Risk awareness", "Real-world skills"] },
-  { icon: BriefcaseBusiness, category: "BUSINESS", title: "BBIT, Business & Information Science", desc: "Business management, ICT, accounting, finance and digital transformation.", tags: ["Career skills", "Case studies"] },
-  { icon: BookOpen, category: "MATHEMATICS", title: "Mathematics & Applied Statistics", desc: "Algebra, discrete mathematics, integrated algebra, probability and statistics.", tags: ["Step by step", "Practice"] },
+  { slug: "software-web-development", icon: Code2, category: "TECHNOLOGY", title: "Software & Web Development", desc: "Programming foundations, HTML, CSS, JavaScript, APIs and software engineering.", tags: ["Beginner friendly", "Projects"] },
+  { slug: "ai-machine-learning-data-science", icon: BrainCircuit, category: "AI & DATA", title: "AI, Machine Learning & Data Science", desc: "Explore Python, statistics, data analysis, machine learning and responsible AI.", tags: ["Practical labs", "Data skills"] },
+  { slug: "cybersecurity-ethical-hacking", icon: ShieldCheck, category: "CYBERSECURITY", title: "Cybersecurity & Ethical Hacking", desc: "Learn defensive security, networking, secure systems and legal lab-based testing.", tags: ["Defensive first", "Safe labs"] },
+  { slug: "financial-literacy-forex", icon: ChartNoAxesCombined, category: "FINANCE", title: "Financial Literacy & Forex", desc: "Budgeting, saving, accounting basics, markets, risk and trading fundamentals.", tags: ["Risk awareness", "Real-world skills"] },
+  { slug: "bbit-business-information-science", icon: BriefcaseBusiness, category: "BUSINESS", title: "BBIT, Business & Information Science", desc: "Business management, ICT, accounting, finance and digital transformation.", tags: ["Career skills", "Case studies"] },
+  { slug: "mathematics-applied-statistics", icon: BookOpen, category: "MATHEMATICS", title: "Mathematics & Applied Statistics", desc: "Algebra, discrete mathematics, integrated algebra, probability and statistics.", tags: ["Step by step", "Practice"] },
 ];
 
 const topics = ["NoSQL databases", "Game development", "ICT fundamentals", "Information science", "Accounting & finance", "Business management", "Applied statistics", "Programming languages", "Scholarship discovery", "Study skills"];
@@ -43,7 +43,7 @@ export default function Home() {
 
     <section id="courses" className="section wrap">
       <div className="section-heading"><div><div className="eyebrow">YOUR LEARNING JOURNEY</div><h2>Knowledge that <em>moves you forward.</em></h2></div><p>From first principles to practical projects, discover a path that fits your goals.</p></div>
-      <div className="course-grid">{courses.map((c) => { const Icon = c.icon; return <article className="course-card" key={c.title}><div className="course-icon"><Icon size={21}/></div><div className="course-category">{c.category}</div><h3>{c.title}</h3><p>{c.desc}</p><div className="tags">{c.tags.map(t=><span key={t}>{t}</span>)}</div><a href={`/learn/${c.title === "Software & Web Development" ? "software-web-development" : c.title === "AI, Machine Learning & Data Science" ? "ai-machine-learning-data-science" : c.title === "Cybersecurity & Ethical Hacking" ? "cybersecurity-ethical-hacking" : c.title === "Financial Literacy & Forex" ? "financial-literacy-forex" : c.title === "BBIT, Business & Information Science" ? "bbit-business-information-science" : "mathematics-applied-statistics"}`} className="course-link">Start learning <ArrowRight size={15}/></a></article>})}</div>
+      <div className="course-grid">{courses.map((c) => { const Icon = c.icon; return <article className="course-card" key={c.title}><div className="course-icon"><Icon size={21}/></div><div className="course-category">{c.category}</div><h3>{c.title}</h3><p>{c.desc}</p><div className="tags">{c.tags.map(t=><span key={t}>{t}</span>)}</div><a href={`/learn/${c.slug}`} className="course-link">Start learning <ArrowRight size={15}/></a></article>})}</div>
       <div className="all-topics"><div><span className="eyebrow">AND THERE'S MORE</span><h3>One platform. Many possibilities.</h3></div><div className="topic-list">{topics.map(t=><span key={t}>{t}</span>)}</div></div>
     </section>
 
