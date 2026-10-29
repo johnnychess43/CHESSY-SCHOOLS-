@@ -14,6 +14,7 @@ export default function LessonPlayer({ courseSlug, courseTitle, lesson, lessonNu
   const [signedIn, setSignedIn] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState("");
+  const [reflection, setReflection] = useState("");
   const isCorrect = selected === lesson.answer;
 
   useEffect(() => {
@@ -59,6 +60,7 @@ export default function LessonPlayer({ courseSlug, courseTitle, lesson, lessonNu
     <div className="lesson-layout"><article className="lesson-material">
       <div className="material-intro"><div className="material-icon"><BookOpen size={21}/></div><div><span className="eyebrow">TODAY'S LEARNING GOAL</span><p>{lesson.objective}</p></div></div>
       {lesson.sections.map((section,index)=><section className="material-section" key={section.heading}><h2><span>{index+1}</span>{section.heading}</h2><p>{section.body}</p>{section.example&&<div className="lesson-example">{section.example}</div>}</section>)}
+      <div className="reflection-check"><span className="eyebrow">PAUSE AND THINK</span><h2>{lesson.reflectionQuestion}</h2><p>Try explaining it in your own words before moving to the quiz. This practice is for learning and is not graded.</p><textarea value={reflection} onChange={(event) => setReflection(event.target.value)} rows={3} placeholder="Write what you understood in your own words…" /></div>
       <div className="knowledge-check"><div className="quiz-label"><Sparkles size={15}/> QUICK CHECK · EARN XP</div><h2>{lesson.question}</h2>
         <div className="quiz-options">{lesson.options.map((option,index)=><button key={option} className={"quiz-option " + (selected===index?"selected ":"") + (checked&&index===lesson.answer?"correct ":"") + (checked&&selected===index&&!isCorrect?"incorrect":"")} onClick={()=>{if(!checked)setSelected(index);}} disabled={checked}><span>{String.fromCharCode(65+index)}</span>{option}</button>)}</div>
         {checked&&<div className={"quiz-feedback "+(isCorrect?"success":"try-again")}><strong>{isCorrect?"Excellent work! +10 XP":"Not quite — review and try again."}</strong><p>{lesson.explanation}</p></div>}
