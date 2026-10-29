@@ -1,12 +1,12 @@
 export type Lesson = {
   slug: string; title: string; minutes: number; objective: string;
   sections: { heading: string; body: string; example?: string }[];
-  question: string; options: string[]; answer: number; explanation: string;
+  reflectionQuestion: string; question: string; options: string[]; answer: number; explanation: string;
 };
 export type Course = { slug: string; title: string; category: string; description: string; level: string; lessons: Lesson[] };
 
 const lesson = (slug: string, title: string, objective: string, heading1: string, body1: string, heading2: string, body2: string, question: string, options: string[], answer: number, explanation: string, example?: string): Lesson => ({
-  slug, title, minutes: 5, objective, sections: [{heading: heading1, body: body1}, {heading: heading2, body: body2, ...(example ? {example} : {})}], question, options, answer, explanation
+  slug, title, minutes: 7, objective, sections: [{heading: heading1, body: body1}, {heading: heading2, body: body2, ...(example ? {example} : {})}], reflectionQuestion: `In your own words, explain one thing you learned about ${title.toLowerCase()}.`, question, options, answer, explanation
 });
 
 export const courses: Course[] = [
